@@ -1,0 +1,11 @@
+<ng-container *ngIf="this.images">
+  <div class="row">
+    <ng-container *ngFor="let col of columns; let index = index; trackby: trackByFn">
+      <div class="column">
+        <div *ngFor="let img of col;let index = index; trackby: trackByFn">
+          <img [src]="img.src" class="imgSrc" loading="lazy">
+        </div>        
+      </div>
+    </ng-container>
+  </div>
+</ng-container>

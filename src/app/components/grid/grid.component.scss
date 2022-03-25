@@ -1,0 +1,75 @@
+// https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_grid_responsive
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 16.66%; /* IE10 */
+  flex: 16.66%;
+  max-width: 16.66%;
+  padding: 0 5px;
+}
+
+.column .imgSrc {  
+  min-height: 100px;
+  vertical-align: middle;
+  width: 100%;
+  padding: 5px;
+}
+
+/* Responsive layout - makes a 5 column-layout instead of 6 columns */
+@media screen and (max-width: 1840px) {
+  .column {
+    -ms-flex: 20%;
+    flex: 20%;
+    max-width: 20%;
+  }
+}
+
+/* Responsive layout - makes a four column-layout instead of 6 columns */
+@media screen and (max-width: 1640px) {
+  .column {
+    -ms-flex: 25%;
+    flex: 25%;
+    max-width: 25%;
+  }
+}
+
+/* Responsive layout - makes a three column-layout instead of 6 columns */
+@media screen and (max-width: 1430px) {
+  .column {
+    -ms-flex: 33.33%;
+    flex: 33.33%;
+    max-width: 33.33%;
+  }
+}
+
+/* Responsive layout - makes a two column-layout instead of 6 columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+.imgSrc {
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+	display: inline-block;
+}
